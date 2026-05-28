@@ -420,10 +420,10 @@ main {
 .kindheit-header {
   background-image:
     linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.55)),
-    url("images/kindheit-header.jpeg");
+    url("images/kindheit-header.jpg");
 
-  background-size: contain;
-  background-position: center center;
+  background-size: cover;
+  background-position: center 35%;
   background-repeat: no-repeat;
   background-color: #e8dfd3;
 }
@@ -502,10 +502,49 @@ main {
 .jugend-header {
   background-image:
     linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.55)),
-    url("images/jugend.jpeg");
+    url("images/jugend.jpg");
 
-  background-size: contain;
+  background-size: 100% auto;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #e8dfd3;
+}
+
+.geschichtenliste.lehrergrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.geschichtenliste.lehrergrid .geschichte {
+  margin: 0;
+}
+
+.geschichtenliste.lehrergrid summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.4rem 1.6rem;
+  font-weight: 600;
+}
+
+.geschichtenliste.lehrergrid summary::-webkit-details-marker {
+  display: none;
+}
+
+.geschichtenliste.lehrergrid summary small {
+  display: block;
+  margin-top: 0.35rem;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.geschichtenliste.lehrergrid details p {
+  padding: 0 1.6rem 1.6rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .geschichtenliste.lehrergrid {
+    grid-template-columns: 1fr;
+  }
 }
