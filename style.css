@@ -657,3 +657,64 @@ main {
   max-width: 700px;
   line-height: 1.35;
 }
+
+.haltungen {
+  margin-top: 5rem;
+}
+
+.haltungen h2 {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  margin-bottom: 3rem;
+}
+
+.haltung {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(70,55,35,0.12);
+}
+}
+
+.haltung h3 {
+  font-family: "Crimson Text", serif;
+  font-size: 2.3rem;
+  margin: 0 0 1.2rem;
+  color: #2b2621;
+}
+
+.haltung p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #3d3832;
+  max-width: 900px;
+}
+
+.lebensmotto,
+.blogmotto {
+  margin: 2.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid rgba(138,93,59,0.35);
+
+  font-family: "Crimson Text", serif;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #2b2621;
+}
+
+.lebensmotto span,
+.blogmotto span {
+  display: block;
+  margin-top: 0.8rem;
+
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #6a6258;
+}
+
+.blogmotto {
+  margin-bottom: 4rem;
+}
