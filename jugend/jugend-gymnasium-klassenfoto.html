@@ -15,6 +15,39 @@
   <link rel="stylesheet" href="../style.css">
 
   <style>
+    .foto-marker-wrap {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .foto-marker-wrap img {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .foto-marker {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: clamp(1rem, 1.7vw, 1.7rem);
+      height: clamp(1rem, 1.7vw, 1.7rem);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.92);
+      border: 2px solid rgba(0,0,0,0.9);
+      color: #000;
+      font-family: Inter, sans-serif;
+      font-size: clamp(0.45rem, 0.8vw, 0.75rem);
+      font-weight: 700;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+    }
+
     .klassenfoto-tabelle {
       width: 100%;
       border-collapse: collapse;
@@ -62,53 +95,40 @@
     <a href="../songs.html">Musik</a>
   </nav>
 
-<header class="seitenkopf">
+  <header class="seitenkopf">
+    <img src="../images/jugend-gymnasium-schule-header.jpg" alt="Gymnasium Bernkastel-Kues">
 
-  <img src="../images/jugend-gymnasium-schule-header.jpg"
-       alt="Gymnasium Bernkastel-Kues">
-
-  <div class="hero-overlay">
+    <div class="hero-overlay">
       <h1>Klassenfoto-Projekt</h1>
-
-      <p class="hero-subtitle">
-        Wer erkennt noch alle Gesichter?
-      </p>
+      <p class="hero-subtitle">Wer erkennt noch alle Gesichter?</p>
     </div>
-
   </header>
 
   <main>
 
-<section class="kapitel-intro">
-  <div class="content">
+    <section class="kapitel-intro">
+      <div class="content">
+        <h2>Das Klassenfoto</h2>
 
-    <h2>Das Klassenfoto</h2>
+        <p>
+          Unsere Klasse Ende der 1960er Jahre
+          am Gymnasium Bernkastel-Kues.
+        </p>
 
-    <p>
-      Unsere Klasse Ende der 1960er Jahre
-      am Gymnasium Bernkastel-Kues.
-    </p>
+        <p>
+          Viele Namen sind bekannt, manche Erinnerungen noch lückenhaft.
+          Ziel dieses Projekts ist es, die Geschichte unserer Klasse möglichst vollständig zu dokumentieren.
+        </p>
 
-    <p>
-      Viele Namen sind bekannt,
-      manche Erinnerungen noch lückenhaft.
-      Ziel dieses Projekts ist es,
-      die Geschichte unserer Klasse möglichst vollständig zu dokumentieren.
-    </p>
-
-    <p>
-      Wer war wer?
-      Wer wohnt heute wo?
-      Welche Lebenswege haben sich entwickelt?
-      Welche Erinnerungen sind geblieben?
-    </p>
-
-  </div>
-</section>
+        <p>
+          Wer war wer? Wer wohnt heute wo? Welche Lebenswege haben sich entwickelt?
+          Welche Erinnerungen sind geblieben?
+        </p>
+      </div>
+    </section>
 
     <section class="raumintro">
       <div class="content">
-
         <figure>
           <img src="../images/jugend-gymnasium-klassenfoto-1969.jpg"
                alt="Klassenfoto 1969"
@@ -118,7 +138,6 @@
             Klassenfoto des Gymnasiums Bernkastel-Kues, Ende der 1960er Jahre.
           </figcaption>
         </figure>
-
       </div>
     </section>
 
@@ -136,12 +155,65 @@
       <div class="content">
 
         <figure>
-          <img src="../images/jugend-gymnasium-klassenfoto-1969-nummeriert.jpg"
-               alt="Nummeriertes Klassenfoto 1969"
-               style="width:100%; border-radius:16px;">
+          <div class="foto-marker-wrap">
+            <img src="../images/jugend-gymnasium-klassenfoto-1969.jpg"
+                 alt="Nummeriertes Klassenfoto 1969">
+
+            <!-- Obere Reihe -->
+            <span class="foto-marker" style="left:17%; top:14.0%;">O1</span>
+            <span class="foto-marker" style="left:22.0%; top:14.0%;">O2</span>
+            <span class="foto-marker" style="left:31.0%; top:12%;">O3</span>
+            <span class="foto-marker" style="left:36.5%; top:11.0%;">O4</span>
+            <span class="foto-marker" style="left:43.5%; top:11.0%;">O5</span>
+            <span class="foto-marker" style="left:51.0%; top:9.0%;">O6</span>
+            <span class="foto-marker" style="left:56.5%; top:10.0%;">O7</span>
+            <span class="foto-marker" style="left:64.0%; top:12.5%;">O8</span>
+            <span class="foto-marker" style="left:71.0%; top:12.5%;">O9</span>
+            <span class="foto-marker" style="left:77.0%; top:13.0%;">O10</span>
+            <span class="foto-marker" style="left:85.0%; top:15.0%;">O11</span>
+
+            <!-- Mittlere Reihe -->
+            <span class="foto-marker" style="left:10.8%; top:37.0%;">M1</span>
+            <span class="foto-marker" style="left:21.0%; top:36.0%;">M2</span>
+            <span class="foto-marker" style="left:29.0%; top:35.0%;">M3</span>
+            <span class="foto-marker" style="left:36.5%; top:37.0%;">M4</span>
+            <span class="foto-marker" style="left:44.0%; top:35.0%;">M5</span>
+            <span class="foto-marker" style="left:50.5%; top:37.0%;">M6</span>
+            <span class="foto-marker" style="left:56.5%; top:38.0%;">M7</span>
+            <span class="foto-marker" style="left:62.0%; top:36.5%;">M8</span>
+            <span class="foto-marker" style="left:69.5%; top:36.5%;">M9</span>
+            <span class="foto-marker" style="left:76.0%; top:37.0%;">M10</span>
+            <span class="foto-marker" style="left:84.0%; top:39.0%;">M11</span>
+            <span class="foto-marker" style="left:91.0%; top:38.0%;">M12</span>
+
+            <!-- Sitzende Reihe -->
+            <span class="foto-marker" style="left:5.5%; top:55.0%;">S1</span>
+            <span class="foto-marker" style="left:12.5%; top:54.0%;">S2</span>
+            <span class="foto-marker" style="left:20.5%; top:52.0%;">S3</span>
+            <span class="foto-marker" style="left:27.5%; top:50.0%;">S4</span>
+            <span class="foto-marker" style="left:33.0%; top:52.0%;">S5</span>
+            <span class="foto-marker" style="left:40.5%; top:52.0%;">S6</span>
+            <span class="foto-marker" style="left:48.0%; top:51.5%;">S7</span>
+            <span class="foto-marker" style="left:53.5%; top:52.0%;">S8</span>
+            <span class="foto-marker" style="left:60.0%; top:51.5%;">S9</span>
+            <span class="foto-marker" style="left:66.0%; top:51.5%;">S10</span>
+            <span class="foto-marker" style="left:74.5%; top:51.5%;">S11</span>
+            <span class="foto-marker" style="left:81.0%; top:51.5%;">S12</span>
+            <span class="foto-marker" style="left:88.0%; top:51.5%;">S13</span>
+            <span class="foto-marker" style="left:96.0%; top:53.0%;">S14</span>
+
+            <!-- Vordere Reihe -->
+            <span class="foto-marker" style="left:25.5%; top:65.0%;">V1</span>
+            <span class="foto-marker" style="left:35.5%; top:64.0%;">V2</span>
+            <span class="foto-marker" style="left:47.0%; top:65.0%;">V3</span>
+            <span class="foto-marker" style="left:57.5%; top:65.0%;">V4</span>
+            <span class="foto-marker" style="left:69.5%; top:65.0%;">V5</span>
+            <span class="foto-marker" style="left:80.5%; top:72.0%;">V6</span>
+            <span class="foto-marker" style="left:90.5%; top:65.0%;">V7</span>
+          </div>
 
           <figcaption>
-            Arbeitsversion des nummerierten Klassenfotos.
+            Nummeriertes Klassenfoto. Die Nummern sind als HTML-Overlays gesetzt und können später leicht korrigiert werden.
           </figcaption>
         </figure>
 
