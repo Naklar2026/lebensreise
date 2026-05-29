@@ -527,8 +527,8 @@ main {
 /* Musik */
 
 .musik-header .hero-overlay {
-  color: #2b241f;
-  text-shadow: none;
+  color: #fffaf3;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.45);
 }
 
 .songs-grid {
@@ -593,4 +593,15 @@ main {
   .songs-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.musik-header {
+  background-image:
+    linear-gradient(rgba(20,18,15,0.35), rgba(20,18,15,0.60)),
+    url("images/musik-header.jpg");
+}
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #e8dfd3;
 }
