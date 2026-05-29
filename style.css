@@ -17,7 +17,7 @@ body {
 .hero {
   min-height: 82vh;
   background:
-linear-gradient(rgba(20, 18, 15, 0.22), rgba(20, 18, 15, 0.48)),
+    linear-gradient(rgba(20, 18, 15, 0.22), rgba(20, 18, 15, 0.48)),
     url("images/portrait-lothar.jpeg");
   background-size: cover;
   background-position: center;
@@ -195,7 +195,6 @@ main {
   justify-content: center;
   gap: 2rem;
   z-index: 1000;
-
   background: rgba(18, 18, 18, 0.18);
   backdrop-filter: blur(10px);
 }
@@ -353,58 +352,44 @@ main {
   border-radius: 20px;
   border: 1px solid rgba(70,55,35,0.1);
   transition: transform 0.2s ease;
-}
-
-.geschichte:hover {
-  transform: translateY(-2px);
-}
-
-.geschichte h2 {
-  font-family: "Crimson Text", serif;
-  font-size: 2rem;
-  margin: 0 0 0.7rem;
-}
-
-.geschichte p {
-  margin: 0;
-  color: #5f574e;
-}
-
-.raumintro {
-  padding: 6rem 8vw 3rem;
-}
-
-.geschichte {
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(4px);
+}
+
+.geschichte:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(45,35,20,0.14);
 }
 
 .geschichte::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.10),
-      rgba(0,0,0,0.02)
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.10),
+    rgba(0,0,0,0.02)
+  );
   pointer-events: none;
 }
 
 .geschichte h2 {
+  font-family: "Crimson Text", serif;
+  font-size: 2rem;
+  margin: 0 0 0.7rem;
   line-height: 1.1;
 }
 
 .geschichte p {
+  margin: 0;
   margin-top: 0.8rem;
+  color: #5f574e;
   line-height: 1.6;
 }
 
-.geschichte:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 50px rgba(45,35,20,0.14);
+.raumintro {
+  padding: 6rem 8vw 3rem;
 }
 
 .seitenkopf {
@@ -421,7 +406,6 @@ main {
   background-image:
     linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.55)),
     url("images/kindheit-header.jpg");
-
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
@@ -457,15 +441,6 @@ main {
   box-shadow: 0 18px 45px rgba(0,0,0,0.12);
 }
 
-.story-header {
-  min-height: 58vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 6rem 8vw 4rem;
-}
-
 .story-intro {
   font-family: "Crimson Text", serif;
   font-size: clamp(1.6rem, 2.5vw, 2rem);
@@ -492,18 +467,18 @@ main {
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
-   background-color: #e8dfd3;
+  background-color: #e8dfd3;
 }
 
 .button {
   display: inline-block;
   margin: 1.5rem 0 2rem;
 }
+
 .jugend-header {
   background-image:
     linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.55)),
     url("images/jugend.jpg");
-
   background-size: 100% auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -545,6 +520,77 @@ main {
 
 @media (max-width: 900px) {
   .geschichtenliste.lehrergrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Musik */
+
+.musik-header .hero-overlay {
+  color: #2b241f;
+  text-shadow: none;
+}
+
+.songs-grid {
+  max-width: 820px;
+  margin: 0 auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.song-card {
+  background: rgba(255,255,255,0.55);
+  border-radius: 18px;
+  padding: 0.6rem;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.07);
+}
+
+.song-card img {
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.song-card h3 {
+  margin: 0.25rem 0 0.15rem;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.song-card > p {
+  margin: 0.15rem 0 0.5rem;
+  color: #5f574e;
+}
+
+.song-card audio {
+  width: 100%;
+  margin: 0.45rem 0 0.6rem;
+}
+
+.song-card details {
+  margin-top: 0.4rem;
+}
+
+.song-card summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.song-card details p {
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .songs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .songs-grid {
     grid-template-columns: 1fr;
   }
 }

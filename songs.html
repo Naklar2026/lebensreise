@@ -1,709 +1,339 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Meine Songs</title>
+  <title>Musik · Lothar Schweigerer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+  <nav class="topnav">
+    <a href="index.html">Start</a>
+    <a href="kindheit.html">Kindheit</a>
+    <a href="jugend.html">Jugend</a>
+    <a href="arbeit-leben.html">Lebensweg</a>
+    <a href="gegenwart.html">Gegenwart</a>
+    <a href="was-geblieben-ist.html">Was geblieben ist</a>
+    <a href="songs.html">Musik</a>
+  </nav>
 
-  <div class="header-inner">
-
-    <div class="site-title">
-      <h2>Echte Worte. Echte Songs.</h2>
-      <p class="site-name">Lothar Schweigerer</p>
-    </div>
-
-    <nav aria-label="Hauptnavigation">
-      <a href="index.html">Meine Person</a>
-      <a href="gegenwart.html">Meine Gegenwart</a>
-      <a href="vergangenheit.html">Meine Vergangenheit</a>
-      <a href="songs.html">Meine Songs</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-
-  </div>
-
-</header>
-
-<main class="songs-page">
-
-  <section class="hero">
-
-    <div>
-      <p class="eyebrow">Musik</p>
-
-      <h1>Meine Songs</h1>
-
-      <p class="hero-lead">
-        Lieder über Freiheit, Aufbruch und Abschied.
-        Über unbequeme Begegnungen, Freundschaft,
-        Familie, Dankbarkeit und das Ende —
-        das vielleicht gar keines ist.
+  <header class="seitenkopf musik-header">
+    <div class="hero-overlay">
+      <h1>Musik</h1>
+      <p class="hero-subtitle">
+        Lieder und Instrumentalstücke über Erinnerungen, Menschen, Verlust, Aufbruch und das, was bleibt.
       </p>
     </div>
+  </header>
 
-  </section>
+  <main>
 
-  <section>
+    <section class="raumintro">
+      <div class="content">
+        <p>
+          Musik spielte in meinem Leben immer eine Rolle. Eigene Songs zu schreiben begann ich allerdings erst spät.
+          Viele dieser Stücke entstanden aus Erinnerungen, Begegnungen und Erfahrungen, die mich geprägt haben.
+        </p>
 
-    <div class="songs-grid">
+        <p>
+          Manche führen zurück in Kindheit und Jugend, andere beschäftigen sich mit meinem Berufsleben,
+          mit Freundschaft, Abschied, Krankheit, Tod und der Frage, was am Ende von uns bleibt.
+        </p>
 
-      <article class="song-card">
-        <img src="images/luegen-klauen.jpg" alt="Cover Lügen, Klauen und Zerstören">
+        <p>
+          Die meisten Songs erzählen eine Geschichte. Manche handeln von realen Menschen,
+          andere von Beobachtungen oder Gedanken, die mich über längere Zeit begleitet haben.
+        </p>
+      </div>
+    </section>
 
-        <h3>Lügen, Klauen und Zerstören</h3>
+    <section class="kapitel-intro">
+      <div class="content">
+        <h2>Kindheit, Heimat und Aufbruch</h2>
+        <p>Erinnerungen an Morbach, Jugend, Studentenzeit und das Gefühl, dass plötzlich alles offen war.</p>
+      </div>
+    </section>
 
-        <p>Mai 2026</p>
+    <section class="songs-grid">
 
-        <audio controls>
-          <source src="audio/luegen-klauen.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Es beschäftigt mich, warum Menschen zulassen, dass Verbrecher,
-            Intriganten und Opportunisten Einfluss gewinnen. Zu oft geschieht
-            es schleichend und zu lange bleibt es unwidersprochen.
-            Das lässt mich nicht kalt. Es macht mich wütend.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/denn-du-bleibst.jpeg" alt="Cover Denn du bleibst">
-
-        <h3>Denn du bleibst</h3>
-
-        <p>April 2025</p>
-
-        <audio controls>
-          <source src="audio/denn-du-bleibst.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            In diesem Song geht es um Leben und Sterben.
-            Ich setze mich bewusst mit meinem eigenen Ende auseinander.
-          </p>
-
-          <p>
-            Ich bin nicht religiös, aber gläubig — und zugleich Naturwissenschaftler.
-            Ich weiß, dass wir aus einer Eizelle und einem Spermium entstehen,
-            und dass alles, was danach kommt, aus der Umwelt stammt.
-            Wir nehmen sie in uns auf, wir leben von ihr
-            und werden wieder zu ihr.
-          </p>
-
-          <p>
-            In gewisser Weise sind wir selbst Teil dieser Umwelt.
-            Und nach unserem Tod kehren wir als Ganzes wieder in sie zurück.
-          </p>
-
-          <p>
-            Vielleicht verschwindet man also gar nicht wirklich aus dieser Welt.
-            Man ist nur auf eine andere Weise da.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/nur-ein-mensch-cash.jpg" alt="Cover Nur ein Mensch">
-
-        <h3>Nur ein Mensch</h3>
-
-        <p>Juli 2025</p>
-
-        <audio controls>
-          <source src="audio/nur-ein-mensch-cash.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            In diesem Song geht es um Menschen, die sich über Äußerlichkeiten definieren.
-            Vielleicht, weil im Inneren etwas fehlt.
-          </p>
-
-          <p>
-            Sie polieren ihr Bild nach außen: mit Status, Besitz und Inszenierung.
-            Oft gelingt es ihnen sogar, sich über andere zu erheben.
-          </p>
-
-          <p>
-            Doch wenn all das wegfällt, bleibt etwas sehr Einfaches zurück:
-            ein Mensch mit Stärken und Schwächen.
-          </p>
-
-          <p>
-            Dann wirkt vieles plötzlich leer und manchmal auch verloren.
-            Das habe ich in diesem Song auszudrücken versucht.
-          </p>
-
-          <p>
-            Musikalisch habe ich mich am späten Johnny Cash orientiert,
-            mit all seiner Zerbrechlichkeit.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/armes-wuerstchen.jpg" alt="Cover Armes Würstchen">
-
-        <h3>Armes Würstchen</h3>
-
-        <p>Juli 2025</p>
-
-        <audio controls>
-          <source src="audio/armes-wuerstchen.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song entstand aus Erfahrungen mit Menschen in Führungspositionen,
-            die ihrer Aufgabe menschlich nicht gewachsen waren.
-          </p>
-
-          <p>
-            Ich habe erlebt, wie Macht, Titel und Beziehungen über Charakter gestellt wurden.
-            Wie Menschen aufstiegen, ohne dadurch größer zu werden.
-          </p>
-
-          <p>
-            Besonders bitter wird es, wenn Leistung eingefordert,
-            aber Fairness verweigert wird. Wenn Zusagen nicht gelten
-            und Aufrichtigkeit durch Taktik ersetzt wird.
-          </p>
-
-          <p>
-            Am Ende bleibt hinter der Fassade oft wenig übrig.
-            Dann sieht man keinen starken Menschen, sondern ein armes Würstchen.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/haare-auf-den-zaehnen.jpg" alt="Cover Haare auf den Zähnen">
-
-        <h3>Haare auf den Zähnen</h3>
-
-        <p>Juli 2025</p>
-
-        <audio controls>
-          <source src="audio/haare-auf-den-zaehnen.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song geht auf eine prägende Zeit während meiner Chefarzttätigkeit zurück.
-            Früh wurde ich gewarnt: „Sie hat Haare auf den Zähnen.“
-            Erst im Laufe der Zusammenarbeit habe ich verstanden, was das bedeutet.
-          </p>
-
-          <p>
-            Es ging um Ehrgeiz ohne Rücksicht, um Intrigen und darum,
-            sich im System um jeden Preis durchzusetzen.
-            Auch auf Kosten anderer. Vieles geschah im Hintergrund,
-            schwer greifbar, aber spürbar in seinen Folgen.
-          </p>
-
-          <p>
-            Nach einigen Jahren habe ich für mich die Konsequenz gezogen
-            und einen Neuanfang gewagt. Rückblickend bleibt die Erkenntnis:
-            Manchmal sind Warnungen erstaunlich zutreffend.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/lebe.jpg" alt="Cover Lebe">
-
-        <h3>Lebe!</h3>
-
-        <p>August 2025</p>
-
-        <audio controls>
-          <source src="audio/lebe.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song ist aus meiner wiederkehrenden Beschäftigung
-            mit dem eigenen Ende entstanden. Oft sitze ich draußen,
-            schaue in die Sterne und staune über die Größe
-            und Schönheit des Universums.
-          </p>
-
-          <p>
-            In solchen Momenten wird mir bewusst, dass wir tatsächlich Teil davon sind.
-            Aus Sternenstaub gemacht und mit allem verbunden, was uns umgibt.
-          </p>
-
-          <p>
-            Konkreter Anlass war das Sterben eines guten Freundes.
-            In dieser Zeit habe ich einen Text von Reinhard Mey aufgegriffen,
-            ihn verändert und weitergeführt.
-          </p>
-
-          <p>
-            Aus einem Lied über das Sterben wurde ein Lied über das Leben:
-            darüber, dass die Auseinandersetzung mit dem Tod uns helfen kann,
-            das Jetzt bewusster und intensiver zu leben.
-          </p>
-
-          <p>
-            Deshalb steht im Zentrum dieses Songs ein einfacher Gedanke:
-            Lebe, so lange du lebst.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
+      <article id="fruehling" class="song-card">
         <img src="images/fruehling.jpg" alt="Cover Frühling in Morbach">
-
         <h3>Frühling in Morbach</h3>
-
         <p>April 2026</p>
-
-        <audio controls>
-          <source src="audio/fruehling.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song führt zurück in meine frühe Kindheit.
-            Es sind oft ganz einfache Momente, die sich tief einprägen.
-          </p>
-
-          <p>
-            Ich war etwa fünf Jahre alt. Mein Vater nahm mich an einem warmen
-            Sonntagmorgen auf seiner Kreidler mit. Ich saß hinter ihm,
-            hielt mich fest, und wir fuhren durch den Frühling —
-            durch blühende Landschaft und milde Luft.
-          </p>
-
-          <p>
-            Es war nichts Besonderes. Und doch war ich in diesem Moment einfach glücklich.
-            Genau dieses Gefühl habe ich in diesem Song festzuhalten versucht.
-          </p>
-        </div>
+        <audio controls><source src="audio/fruehling.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+         <p>Dieser Song führt zurück in meine frühe Kindheit. Es sind oft ganz einfache Momente, die sich tief einprägen.</p>
+<p>Ich war etwa fünf Jahre alt. Mein Vater nahm mich an einem warmen Sonntagmorgen auf seiner Kreidler mit. Ich saß hinter ihm, hielt mich fest, und wir fuhren durch den Frühling — durch blühende Landschaft und milde Luft.</p>
+<p>Es war nichts Besonderes. Und doch war ich in diesem Moment einfach glücklich. Genau dieses Gefühl habe ich in diesem Song festzuhalten versucht.</p>
+        </details>
       </article>
 
-      <article class="song-card">
+      <article id="aeppelwoi" class="song-card">
         <img src="images/aeppelwoi.jpg" alt="Cover Äppelwoi in Overhesse">
-
         <h3>Äppelwoi in Overhesse</h3>
-
         <p>April 2026</p>
-
-        <audio controls>
-          <source src="audio/aeppelwoi.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song führt zurück in meine Studentenzeit,
-            eine Phase voller Leichtigkeit und Unbeschwertheit.
-            Mein Freund Luigi und ich zogen oft bis spät in die Nacht durch die Kneipen.
-          </p>
-
-          <p>
-            Wenn die letzten Lichter ausgingen, blieb auf dem Heimweg meist noch
-            eine letzte Flasche Apfelwein. Und wir hatten ein Ritual entwickelt:
-            austrinken und die leere Flasche Possmann in die Lahn werfen.
-          </p>
-
-          <p>
-            Der Song erzählt von Freundschaft, Freiheit und einer Zeit,
-            in der das Leben noch offen vor uns lag.
-          </p>
-        </div>
+        <audio controls><source src="audio/aeppelwoi.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Dieser Song führt zurück in meine Studentenzeit, eine Phase voller Leichtigkeit und Unbeschwertheit. Mein Freund Luigi und ich zogen oft bis spät in die Nacht durch die Kneipen.</p>
+<p>Wenn die letzten Lichter ausgingen, blieb auf dem Heimweg meist noch eine letzte Flasche Apfelwein. Und wir hatten ein Ritual entwickelt: austrinken und die leere Flasche Possmann in die Lahn werfen.</p>
+<p>Der Song erzählt von Freundschaft, Freiheit und einer Zeit, in der das Leben noch offen vor uns lag.</p>
+        </details>
       </article>
 
-      <article class="song-card">
-        <img src="images/nur-ein-mensch-cash.jpg" alt="Cover Nur ein Mensch #2">
-
-        <h3>Nur ein Mensch #2</h3>
-
-        <p>April 2025</p>
-
-        <audio controls>
-          <source src="audio/nur-ein-mensch2.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            In diesem Song geht es um Menschen, die sich über Äußerlichkeiten definieren.
-            Vielleicht, weil im Inneren etwas fehlt.
-          </p>
-
-          <p>
-            Sie polieren ihr Bild nach außen, mit Status, Besitz und Inszenierung.
-            Oft gelingt es ihnen sogar, sich über andere zu erheben.
-          </p>
-
-          <p>
-            Doch wenn all das wegfällt, bleibt etwas sehr Einfaches zurück:
-            ein Mensch mit Stärken und Schwächen.
-          </p>
-
-          <p>
-            Dann wirkt vieles plötzlich leer und manchmal auch verloren.
-            Das habe ich in diesem Song auszudrücken versucht.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/ich-geb-nicht-auf.jpg" alt="Cover Ich geb nicht auf">
-
-        <h3>Ich geb nicht auf</h3>
-
-        <p>Mai 2026</p>
-
-        <audio controls>
-          <source src="audio/ich-geb-nicht-auf.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song ist aus Erfahrungen mit Menschen entstanden,
-            die mich unterschätzt oder in Frage gestellt haben.
-            Widerstand hat bei mir immer auch Hartnäckigkeit ausgelöst —
-            den Wunsch, standzuhalten und den eigenen Weg weiterzugehen.
-          </p>
-
-          <p>
-            In seiner Schärfe ist der Text aber weniger autobiografisch,
-            sondern eher eine Hommage an Menschen, die unter Druck und Anfeindung
-            Haltung bewahren. Menschen, die oft allein stehen und dennoch nicht weichen.
-          </p>
-
-          <p>
-            Deshalb steht im Zentrum dieses Songs ein einfacher Satz:
-            Ihr kriegt mich nicht. Ich geb nicht auf.
-          </p>
-
-          <p>
-            <em>
-              Beim Anhören fühlte ich mich etwas an John McLaughlins
-              Mahavishnu Orchestra erinnert — ohne dass ich das beabsichtigt hatte.
-            </em>
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/ich-geb-nicht-auf.jpg" alt="Cover Ich geb nicht auf #2">
-
-        <h3>Ich geb nicht auf #2</h3>
-
-        <p>Mai 2026</p>
-
-        <audio controls>
-          <source src="audio/ich-geb-nicht-auf-2.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song ist aus Erfahrungen mit Menschen entstanden,
-            die mich unterschätzt oder in Frage gestellt haben.
-            Widerstand hat bei mir immer auch Hartnäckigkeit ausgelöst —
-            den Wunsch, standzuhalten und den eigenen Weg weiterzugehen.
-          </p>
-
-          <p>
-            In seiner Schärfe ist der Text aber weniger autobiografisch,
-            sondern eher eine Hommage an Menschen, die unter Druck und Anfeindung
-            Haltung bewahren. Menschen, die oft allein stehen und dennoch nicht weichen.
-          </p>
-
-          <p>
-            Deshalb steht im Zentrum dieses Songs ein einfacher Satz:
-            Ihr kriegt mich nicht. Ich geb nicht auf.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/berater-auf-erfolgskurs.jpg" alt="Cover Berater auf Erfolgskurs">
-
-        <h3>Berater auf Erfolgskurs</h3>
-
-        <p>Mai 2026</p>
-
-        <audio controls>
-          <source src="audio/berater-auf-erfolgskurs.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>
-            Dieser Song erzählt mit einer Portion Sarkasmus vom Zusammentreffen zweier Welten:
-            hier der Klinikalltag mit Verantwortung für Patienten —
-            dort junge Berater mit Excel-Tabellen und fertigen Ergebnissen.
-          </p>
-
-          <p>
-            Ein Song über Zahlen, Personaldebatten und die manchmal erstaunlich einfache
-            Logik sogenannter „unabhängiger“ Gutachten.
-          </p>
-        </div>
-      </article>
-
-      <article class="song-card">
-        <img src="images/ich-helfe-dir.jpg" alt="Cover Ich">
-
-        <h3>Ich steh dir bei</h3>
-
-        <p>Mai 2026</p>
-
-        <audio controls>
-          <source src="audio/ich-helfe-dir.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>Der Ursprung dieses Songs liegt in meiner beruflichen Tätigkeit als Kinderonkologe.
-            Während der mögliche Tod für Kleinkinder mit ihrer Krebskrankheit noch nicht greifbar ist, so ist die Situation für die Jugendlichen grundsätzlich anders.
-            Sie müssen sich mit existenziellen Ängsten auseinandersetzen, die sie selbst oft nicht vollständig verstehen und
-            über die sie selbst mit ihren Eltern nur schwer sprechen können.</p>
-          <p>In vielen Gesprächen ging es nicht nur um Medizin, sondern auch um Angst, Hoffnung,
-            Vertrauen und menschliche Nähe. „Ich steh dir bei“ beschreibt diese besondere Beziehung zwischen uns
-            und ihren Familien.</p>
-          <p>Der Song ist zugleich eine Erinnerung daran, wie wichtig Beistand und menschliche Stärke
-            in solchen Situationen sind.</p>
-            <p><em>Das Bild zeigt Oskar, einen wunderbaren jungen Menschen, den ich sehr mochte. Sein Blick läßt erahnen, was in ihm vorgeht.</em></p>
-        </div>
-      </article>
-
-            <article class="song-card">
-        <img src="images/endlich-frei.jpg" alt="Cover Ich">
-
+      <article id="endlich-frei" class="song-card">
+        <img src="images/endlich-frei.jpg" alt="Cover Endlich frei">
         <h3>Endlich frei</h3>
-
         <p>Mai 2026</p>
-
-        <audio controls>
-          <source src="audio/endlich-frei.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>„Endlich frei“ erzählt von meinem Aufbruch aus meinem kleinen Heimatort Morbach in eine neue Welt.
-            Nach dem Abitur begann ich in Giessen Medizin zu studieren – und zum ersten Mal in meinem Leben
-            fühlte ich mich wirklich frei.</p> 
-            <p>Alles schien möglich, als hätte ich plötzlich Flügel bekommen und könnte mein Leben selbst gestalten.
-              Der Song erinnert an diese seltene Zeit voller Aufbruch, Sehnsucht und Glück – an das Gefühl, dass die Welt plötzlich offen vor mir liegt.</p>
-        </div>
+        <audio controls><source src="audio/endlich-frei.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>„Endlich frei“ erzählt von meinem Aufbruch aus meinem kleinen Heimatort Morbach in eine neue Welt. Nach dem Abitur begann ich in Giessen Medizin zu studieren – und zum ersten Mal in meinem Leben fühlte ich mich wirklich frei.</p>
+<p>Alles schien möglich, als hätte ich plötzlich Flügel bekommen und könnte mein Leben selbst gestalten. Der Song erinnert an diese seltene Zeit voller Aufbruch, Sehnsucht und Glück – an das Gefühl, dass die Welt plötzlich offen vor mir liegt.</p>
+        </details>
       </article>
 
-            </article>
+    </section>
 
-            <article class="song-card">
+    <section class="kapitel-intro">
+      <div class="content">
+        <h2>Leben, Tod und was bleibt</h2>
+        <p>Songs über Vergänglichkeit, Abschied, Trost und die Frage, ob wirklich alles verschwindet.</p>
+      </div>
+    </section>
+
+    <section class="songs-grid">
+
+      <article id="denn-du-bleibst" class="song-card">
+        <img src="images/denn-du-bleibst.jpeg" alt="Cover Denn du bleibst">
+        <h3>Denn du bleibst</h3>
+        <p>April 2025</p>
+        <audio controls><source src="audio/denn-du-bleibst.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>In diesem Song geht es um Leben und Sterben. Ich setze mich bewusst mit meinem eigenen Ende auseinander.</p>
+<p>Ich bin nicht religiös, aber gläubig — und zugleich Naturwissenschaftler. Ich weiß, dass wir aus einer Eizelle und einem Spermium entstehen, und dass alles, was danach kommt, aus der Umwelt stammt. Wir nehmen sie in uns auf, wir leben von ihr und werden wieder zu ihr.</p>
+<p>In gewisser Weise sind wir selbst Teil dieser Umwelt. Und nach unserem Tod kehren wir als Ganzes wieder in sie zurück.</p>
+<p>Vielleicht verschwindet man also gar nicht wirklich aus dieser Welt. Man ist nur auf eine andere Weise da.</p>
+        </details>
+      </article>
+
+      <article id="lebe" class="song-card">
+        <img src="images/lebe.jpg" alt="Cover Lebe">
+        <h3>Lebe!</h3>
+        <p>August 2025</p>
+        <audio controls><source src="audio/lebe.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Dieser Song ist aus meiner wiederkehrenden Beschäftigung mit dem eigenen Ende entstanden. Oft sitze ich draußen, schaue in die Sterne und staune über die Größe und Schönheit des Universums.</p>
+<p>In solchen Momenten wird mir bewusst, dass wir tatsächlich Teil davon sind. Aus Sternenstaub gemacht und mit allem verbunden, was uns umgibt.</p>
+<p>Konkreter Anlass war das Sterben eines guten Freundes. In dieser Zeit habe ich einen Text von Reinhard Mey aufgegriffen, ihn verändert und weitergeführt.</p>
+<p>Aus einem Lied über das Sterben wurde ein Lied über das Leben: darüber, dass die Auseinandersetzung mit dem Tod uns helfen kann, das Jetzt bewusster und intensiver zu leben.</p>
+<p>Deshalb steht im Zentrum dieses Songs ein einfacher Gedanke: Lebe, so lange du lebst.</p>
+        </details>
+      </article>
+
+      <article id="unsterblich" class="song-card">
         <img src="images/unsterblich.jpg" alt="Cover Unsterblich">
-
         <h3>Unsterblich</h3>
-
         <p>Mai 2026</p>
-
-        <audio controls>
-          <source src="audio/unsterblich.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-<p>„Unsterblich“ entstand aus einem flüchtigen Gedanken.</p>
-<p>Ich saß im Auto an einer Ampel hinter der Neckarbrücke in Heidelberg. Bei Rot dachte ich an meinen
-  neugeborenen Sohn Jan und daran, dass ein Teil von mir in ihm weiterleben wird.
-  Dieser Gedanke löste in mir ein tiefes Gefühl von Ruhe, Vollständigkeit und innerem Frieden aus.</p>
+        <audio controls><source src="audio/unsterblich.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>„Unsterblich“ entstand aus einem flüchtigen Gedanken.</p>
+<p>Ich saß im Auto an einer Ampel hinter der Neckarbrücke in Heidelberg. Bei Rot dachte ich an meinen neugeborenen Sohn Jan und daran, dass ein Teil von mir in ihm weiterleben wird. Dieser Gedanke löste in mir ein tiefes Gefühl von Ruhe, Vollständigkeit und innerem Frieden aus.</p>
 <p>Der Song versucht, diesen unerwarteten Moment festzuhalten, als Angst und Vergänglichkeit ihre Bedeutung verloren.</p>
-        </div>
+        </details>
       </article>
 
-    <article class="song-card">
-        <img src="images/umarmung.jpg" alt="Noch eine Umarmung">
-
+      <article id="umarmung" class="song-card">
+        <img src="images/umarmung.jpg" alt="Cover Noch eine Umarmung">
         <h3>Noch eine Umarmung</h3>
-
         <p>August 2024</p>
+        <audio controls><source src="audio/umarmung.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Der Song entstand aus einem unscheinbaren Moment des Abschieds. Nach einem Wochenende bei meiner Mutter in Morbach fuhren wir – meine Frau, unsere beiden Kinder und ich – zurück nach Essen. Während wir losfuhren und noch winkten, sah ich meine Mutter im Rückspiegel immer kleiner werden. Bis mir plötzlich bewusst wurde, dass es vielleicht nicht mehr viele solcher Abschiede geben würde.</p>
+<p>Sie war damals bereits 92 Jahre alt. Nach ihrem Tod blieb vor allem der Wunsch zurück, sie noch ein einziges Mal in den Arm nehmen zu können. Und in einem stillen Tagtraum geschah genau das noch einmal.</p>
+        </details>
+      </article>
 
-        <audio controls>
-          <source src="audio/umarmung.mp3" type="audio/mpeg">
-        </audio>
+    </section>
 
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
+    <section class="kapitel-intro">
+      <div class="content">
+        <h2>Menschen und Erfahrungen</h2>
+        <p>Begegnungen aus Beruf und Leben: manche berührend, manche bitter, manche schlicht ärgerlich.</p>
+      </div>
+    </section>
 
-        <div class="song-info">
-          <p>Der Song entstand aus einem unscheinbaren Moment des Abschieds. 
-          Nach einem Wochenende bei meiner Mutter in Morbach fuhren wir – meine Frau,
-          unsere beiden Kinder und ich – zurück nach Essen.
-          Während wir losfuhren und noch winkten, sah ich meine Mutter im Rückspiegel immer
-          kleiner werden. Bis mir plötzlich bewusst wurde, 
-          dass es vielleicht nicht mehr viele solcher Abschiede geben würde.</p>
-        <p>Sie war damals bereits 92 Jahre alt. Nach ihrem Tod blieb vor allem der Wunsch zurück, 
-          sie noch ein einziges Mal in den Arm nehmen zu können. Und in einem stillen Tagtraum
-          geschah genau das noch einmal.</p>
-        </div>
-    </article>
+    <section class="songs-grid">
 
-    <article class="song-card">
-        <img src="images/trilogie-evolution1.jpg" alt="Trilogie - Evolution 1">
+      <article id="ich-steh-dir-bei" class="song-card">
+        <img src="images/ich-helfe-dir.jpg" alt="Cover Ich steh dir bei">
+        <h3>Ich steh dir bei</h3>
+        <p>Mai 2026</p>
+        <audio controls><source src="audio/ich-helfe-dir.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Der Ursprung dieses Songs liegt in meiner beruflichen Tätigkeit als Kinderonkologe. Während der mögliche Tod für Kleinkinder mit ihrer Krebskrankheit noch nicht greifbar ist, so ist die Situation für die Jugendlichen grundsätzlich anders. Sie müssen sich mit existenziellen Ängsten auseinandersetzen, die sie selbst oft nicht vollständig verstehen und über die sie selbst mit ihren Eltern nur schwer sprechen können.</p>
+<p>In vielen Gesprächen ging es nicht nur um Medizin, sondern auch um Angst, Hoffnung, Vertrauen und menschliche Nähe. „Ich steh dir bei“ beschreibt diese besondere Beziehung zwischen uns und ihren Familien.</p>
+<p>Der Song ist zugleich eine Erinnerung daran, wie wichtig Beistand und menschliche Stärke in solchen Situationen sind.</p>
+<p><em>Das Bild zeigt Oskar, einen wunderbaren jungen Menschen, den ich sehr mochte. Sein Blick läßt erahnen, was in ihm vorgeht.</em></p>
+        </details>
+      </article>
 
+      <article id="nur-ein-mensch" class="song-card">
+        <img src="images/nur-ein-mensch-cash.jpg" alt="Cover Nur ein Mensch">
+        <h3>Nur ein Mensch</h3>
+        <p>Juli 2025</p>
+        <audio controls><source src="audio/nur-ein-mensch-cash.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>In diesem Song geht es um Menschen, die sich über Äußerlichkeiten definieren. Vielleicht, weil im Inneren etwas fehlt.</p>
+<p>Sie polieren ihr Bild nach außen: mit Status, Besitz und Inszenierung. Oft gelingt es ihnen sogar, sich über andere zu erheben.</p>
+<p>Doch wenn all das wegfällt, bleibt etwas sehr Einfaches zurück: ein Mensch mit Stärken und Schwächen.</p>
+<p>Dann wirkt vieles plötzlich leer und manchmal auch verloren. Das habe ich in diesem Song auszudrücken versucht.</p>
+<p>Musikalisch habe ich mich am späten Johnny Cash orientiert, mit all seiner Zerbrechlichkeit.</p>
+        </details>
+      </article>
+
+      <article id="nur-ein-mensch-2" class="song-card">
+         <img src="images/nur-ein-mensch-cash.jpg" alt="Cover Nur ein Mensch #2">
+         <h3>Nur ein Mensch #2</h3>
+         <p>April 2025</p>
+         <audio controls><source src="audio/nur-ein-mensch2.mp3" type="audio/mpeg"></audio>
+         <details><summary>Zur Entstehung</summary>
+          <p>In diesem Song geht es um Menschen, die sich über Äußerlichkeiten definieren. Vielleicht, weil im Inneren etwas fehlt.</p>
+<p>Sie polieren ihr Bild nach außen, mit Status, Besitz und Inszenierung. Oft gelingt es ihnen sogar, sich über andere zu erheben.</p>
+<p>Doch wenn all das wegfällt, bleibt etwas sehr Einfaches zurück: ein Mensch mit Stärken und Schwächen.</p>
+<p>Dann wirkt vieles plötzlich leer und manchmal auch verloren. Das habe ich in diesem Song auszudrücken versucht.</p>
+        </details>
+      </article>
+
+      <article id="armes-wuerstchen" class="song-card">
+        <img src="images/armes-wuerstchen.jpg" alt="Cover Armes Würstchen">
+        <h3>Armes Würstchen</h3>
+        <p>Juli 2025</p>
+        <audio controls><source src="audio/armes-wuerstchen.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Dieser Song entstand aus Erfahrungen mit Menschen in Führungspositionen, die ihrer Aufgabe menschlich nicht gewachsen waren.</p>
+<p>Ich habe erlebt, wie Macht, Titel und Beziehungen über Charakter gestellt wurden. Wie Menschen aufstiegen, ohne dadurch größer zu werden.</p>
+<p>Besonders bitter wird es, wenn Leistung eingefordert, aber Fairness verweigert wird. Wenn Zusagen nicht gelten und Aufrichtigkeit durch Taktik ersetzt wird.</p>
+<p>Am Ende bleibt hinter der Fassade oft wenig übrig. Dann sieht man keinen starken Menschen, sondern ein armes Würstchen.</p>
+        </details>
+      </article>
+
+      <article id="haare" class="song-card">
+        <img src="images/haare-auf-den-zaehnen.jpg" alt="Cover Haare auf den Zähnen">
+        <h3>Haare auf den Zähnen</h3>
+        <p>Juli 2025</p>
+        <audio controls><source src="audio/haare-auf-den-zaehnen.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Dieser Song geht auf eine prägende Zeit während meiner Chefarzttätigkeit zurück. Früh wurde ich gewarnt: „Sie hat Haare auf den Zähnen.“ Erst im Laufe der Zusammenarbeit habe ich verstanden, was das bedeutet.</p>
+<p>Es ging um Ehrgeiz ohne Rücksicht, um Intrigen und darum, sich im System um jeden Preis durchzusetzen. Auch auf Kosten anderer. Vieles geschah im Hintergrund, schwer greifbar, aber spürbar in seinen Folgen.</p>
+<p>Nach einigen Jahren habe ich für mich die Konsequenz gezogen und einen Neuanfang gewagt. Rückblickend bleibt die Erkenntnis: Manchmal sind Warnungen erstaunlich zutreffend.</p>
+        </details>
+      </article>
+
+      <article id="berater" class="song-card">
+        <img src="images/berater-auf-erfolgskurs.jpg" alt="Cover Berater auf Erfolgskurs">
+        <h3>Berater auf Erfolgskurs</h3>
+        <p>Mai 2026</p>
+        <audio controls><source src="audio/berater-auf-erfolgskurs.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Dieser Song erzählt mit einer Portion Sarkasmus vom Zusammentreffen zweier Welten: hier der Klinikalltag mit Verantwortung für Patienten — dort junge Berater mit Excel-Tabellen und fertigen Ergebnissen.</p>
+<p>Ein Song über Zahlen, Personaldebatten und die manchmal erstaunlich einfache Logik sogenannter „unabhängiger“ Gutachten.</p>
+        </details>
+      </article>
+
+      <article id="ich-geb-nicht-auf" class="song-card">
+        <img src="images/ich-geb-nicht-auf.jpg" alt="Cover Ich geb nicht auf">
+        <h3>Ich geb nicht auf</h3>
+        <p>Mai 2026</p>
+        <audio controls><source src="audio/ich-geb-nicht-auf.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+         <p>
+Dieser Song entstand aus Erfahrungen mit Menschen, die mich unterschätzt, abgeschrieben oder in Frage gestellt haben. Im Laufe meines Lebens gab es immer wieder Situationen, in denen andere glaubten zu wissen, was möglich ist und was nicht. Oft waren es gerade diese Zweifel und Widerstände, die mich zusätzlich motiviert haben. Der Song beschreibt die Haltung, sich nicht beirren zu lassen, den eigenen Weg weiterzugehen und auch nach Rückschlägen wieder aufzustehen. Im Zentrum steht eine einfache Botschaft: Ihr kriegt mich nicht. Ich geb nicht auf.
+</p> 
+        </details>
+      </article>
+
+      <article id="ich-geb-nicht-auf-2" class="song-card">
+        <img src="images/ich-geb-nicht-auf.jpg" alt="Cover Ich geb nicht auf #2">
+        <h3>Ich geb nicht auf #2</h3>
+        <p>Mai 2026</p>
+        <audio controls><source src="audio/ich-geb-nicht-auf-2.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+         <p>
+Dieser Song entstand aus Erfahrungen mit Menschen, die mich unterschätzt, abgeschrieben oder in Frage gestellt haben. Im Laufe meines Lebens gab es immer wieder Situationen, in denen andere glaubten zu wissen, was möglich ist und was nicht. Oft waren es gerade diese Zweifel und Widerstände, die mich zusätzlich motiviert haben. Der Song beschreibt die Haltung, sich nicht beirren zu lassen, den eigenen Weg weiterzugehen und auch nach Rückschlägen wieder aufzustehen. Im Zentrum steht eine einfache Botschaft: Ihr kriegt mich nicht. Ich geb nicht auf.
+</p>
+        </details>
+      </article>
+
+      <article id="luegen" class="song-card">
+        <img src="images/luegen-klauen.jpg" alt="Cover Lügen, Klauen und Zerstören">
+        <h3>Lügen, Klauen und Zerstören</h3>
+        <p>Mai 2026</p>
+        <audio controls><source src="audio/luegen-klauen.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>Es beschäftigt mich, warum Menschen zulassen, dass Verbrecher, Intriganten und Opportunisten Einfluss gewinnen. Das lässt mich nicht kalt. Es macht mich wütend.</p>
+        </details>
+      </article>
+
+    </section>
+
+    <section class="kapitel-intro">
+      <div class="content">
+        <h2>Instrumental</h2>
+        <p>Die Evolution-Trilogie: ein musikalisches Motiv in drei Entwicklungsstufen.</p>
+      </div>
+    </section>
+
+    <section class="songs-grid">
+
+      <article id="evolution1" class="song-card">
+        <img src="images/trilogie-evolution1.jpg" alt="Cover Evolution 1">
         <h3>Trilogie - Evolution 1</h3>
-
         <p>Mai 2026</p>
+        <audio controls><source src="audio/trilogie-evolution1.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>„Evolution 1“ entstand aus einem einfachen musikalischen Grundmotiv, das bewusst offen und schwebend gehalten ist. Die Musik lebt weniger von Melodie als von Atmosphäre, Wiederholung und kleinen harmonischen Verschiebungen. Mich interessierte dabei die Frage, wie viel emotionale Wirkung bereits aus wenigen Tönen entstehen kann.</p>
+<p>Das Stück wirkt dadurch fast wie ein musikalischer Gedanke oder eine Skizze, aus der sich langsam etwas entwickelt.</p>
+<p>Meine Frau nennt das Stück „Super Mario“, weil es sie an die Begleitmusik des gleichnamigen Videospiels erinnert. Das sehe ich natürlich etwas anders.</p>
+        </details>
+      </article>
 
-        <audio controls>
-          <source src="audio/trilogie-evolution1.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-          <p>„Evolution 1“ entstand aus einem einfachen musikalischen Grundmotiv, das bewusst offen
-          und schwebend gehalten ist. Die Musik lebt weniger von Melodie als von Atmosphäre, Wiederholung
-          und kleinen harmonischen Verschiebungen. Mich interessierte dabei die Frage, wie viel emotionale
-          Wirkung bereits aus wenigen Tönen entstehen kann.</p>
-          <p>Das Stück wirkt dadurch fast wie ein musikalischer Gedanke oder eine Skizze, aus der sich
-          langsam etwas entwickelt.</p>
-          <p>Meine Frau nennt das Stück „Super Mario“, weil es sie an die Begleitmusik des gleichnamigen
-          Videospiels erinnert. Das sehe ich natürlich etwas anders.</p>
-        </div>
-    </article>
-
-    <article class="song-card">
-        <img src="images/trilogie-evolution2.jpg" alt="Trilogie - Evolution 2">
-
+      <article id="evolution2" class="song-card">
+        <img src="images/trilogie-evolution2.jpg" alt="Cover Evolution 2">
         <h3>Trilogie - Evolution 2</h3>
-
         <p>Mai 2026</p>
+        <audio controls><source src="audio/trilogie-evolution2.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>„Evolution 2“ greift das ursprüngliche Motiv von „Evolution 1“ auf, entwickelt es jedoch weiter und erweitert den Klangraum deutlich. Neue Instrumente, zusätzliche harmonische Ebenen und kleine Gegenmotive sorgen für mehr Bewegung und emotionale Tiefe.</p>
+<p>Die Musik bleibt weiterhin atmosphärisch und offen, wirkt nun aber viel organischer und lebendiger. Aus der ursprünglichen Skizze entsteht langsam eine komplexere musikalische Landschaft.</p>
+        </details>
+      </article>
 
-        <audio controls>
-          <source src="audio/trilogie-evolution2.mp3" type="audio/mpeg">
-        </audio>
-
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
-
-        <div class="song-info">
-        <p>„Evolution 2“ greift das ursprüngliche Motiv von „Evolution 1“ auf, entwickelt es jedoch
-          weiter und erweitert den Klangraum deutlich. Neue Instrumente, zusätzliche harmonische Ebenen
-          und kleine Gegenmotive sorgen für mehr Bewegung und emotionale Tiefe.</p>
-        <p>Die Musik bleibt weiterhin atmosphärisch und offen, wirkt nun aber viel organischer und lebendiger.
-          Aus der ursprünglichen Skizze entsteht langsam eine komplexere musikalische Landschaft.</p>
-        </div>
-    </article>
-
-    <article class="song-card">
-        <img src="images/trilogie-evolution3.jpg" alt="Trilogie - Evolution 3">
-
+      <article id="evolution3" class="song-card">
+        <img src="images/trilogie-evolution3.jpg" alt="Cover Evolution 3">
         <h3>Trilogie - Evolution 3</h3>
-
         <p>Mai 2026</p>
+        <audio controls><source src="audio/trilogie-evolution3.mp3" type="audio/mpeg"></audio>
+        <details><summary>Zur Entstehung</summary>
+          <p>„Evolution 3“ entfernt sich am weitesten vom ursprünglichen Ausgangspunkt. Das Grundmotiv bleibt zwar noch erkennbar, wird jedoch von jazzigen Harmonien, rhythmischen Verschiebungen und improvisationsartigen Elementen umspielt. Dadurch entsteht eine deutlich unruhigere und experimentellere Stimmung.</p>
+<p>Das Stück wirkt weniger meditativ als die ersten beiden Versionen und entwickelt stattdessen eine fast suchende, spontane Energie. Wie eine musikalische Erforschung derselben Idee aus einer völlig anderen Perspektive.</p>
+        </details>
+      </article>
 
-        <audio controls>
-          <source src="audio/trilogie-evolution3.mp3" type="audio/mpeg">
-        </audio>
+    </section>
 
-        <button class="song-info-toggle" onclick="toggleSongInfo(this)">
-          Zur Entstehung
-        </button>
+  </main>
 
-        <div class="song-info">
-            <p>„Evolution 3“ entfernt sich am weitesten vom ursprünglichen Ausgangspunkt. Das Grundmotiv
-            bleibt zwar noch erkennbar, wird jedoch von jazzigen Harmonien, rhythmischen Verschiebungen
-            und improvisationsartigen Elementen umspielt. Dadurch entsteht eine deutlich unruhigere und
-            experimentellere Stimmung.</p>
-            <p>Das Stück wirkt weniger meditativ als die ersten beiden Versionen und entwickelt stattdessen
-              eine fast suchende, spontane Energie. Wie eine musikalische Erforschung derselben Idee aus einer
-              völlig anderen Perspektive.</p>
-        </div>
-    </article>
-
-    </div>
-
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <p>© Naklar2026</p>
-</footer>
-
-<script src="script.js"></script>
+  <footer class="footer">
+    <p>© Lothar Schweigerer · Lebensreise</p>
+  </footer>
 
 </body>
+
 </html>
