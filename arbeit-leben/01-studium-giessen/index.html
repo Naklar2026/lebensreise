@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="de">
 
@@ -5,36 +6,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Studium in Gießen</title>
+  <title>Studium in Gießen · Lothar Schweigerer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../../style.css?v=10">
+  <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
 
-<div class="page">
+  <nav class="topnav">
+    <a href="../../index.html">Start</a>
+    <a href="../../kindheit.html">Kindheit</a>
+    <a href="../../jugend.html">Jugend</a>
+    <a href="../../arbeit-leben.html">Lebensweg</a>
+    <a href="../../gegenwart.html">Gegenwart</a>
+    <a href="../../was-geblieben-ist.html">Was geblieben ist</a>
+    <a href="../../songs.html">Musik</a>
+  </nav>
 
-  <header>
+  <header class="story-header" style="background-image:
+    linear-gradient(rgba(20,18,15,0.25), rgba(20,18,15,0.58)),
+    url('../../images/studium-giessen-header.jpg');">
 
-    <div class="header-inner">
+    <div class="hero-overlay">
 
-      <div class="site-title">
-        <h2>Echte Worte. Echte Songs.</h2>
-        <p class="site-name">Lothar Schweigerer</p>
-      </div>
+      <h1>Studium in Gießen</h1>
 
-      <nav aria-label="Hauptnavigation">
-        <a href="../../index.html">Meine Person</a>
-        <a href="../../gegenwart.html">Meine Gegenwart</a>
-        <a href="../../vergangenheit.html">Meine Vergangenheit</a>
-        <a href="../../songs.html">Meine Songs</a>
-        <a href="../../kontakt.html">Kontakt</a>
-      </nav>
+      <p class="hero-subtitle">
+        Der unerwartete Weg in die Medizin, erste Bewährungsproben
+        und das Gefühl, plötzlich frei zu sein.
+      </p>
 
     </div>
 
@@ -42,67 +47,82 @@
 
   <main>
 
-    <section class="hero">
+    <section class="raumintro">
+      <div class="content">
 
-      <div>
+        <p>
+          Gießen war der Beginn eines neuen Lebensabschnitts.
+          Nach Gymnasium, Sitzenbleiben und einem eher mäßigen Abitur
+          kam ich nicht über einen geraden Weg zur Medizin,
+          sondern durch einen glücklichen Losentscheid.
+        </p>
 
-        <p class="eyebrow">Arbeit & Leben</p>
+        <p>
+          Aus dem Hunsrückjungen, dem man nicht allzu viel zugetraut hatte,
+          wurde plötzlich ein Medizinstudent. Anfangs mit wenig Selbstvertrauen,
+          aber mit dem festen Willen, diese Chance nicht zu verspielen.
+        </p>
 
-        <h1>Studium in Gießen</h1>
-
-        <p class="hero-lead">
-          Die Jahre zwischen 1973 und 1980 —
-          eine Zeit des Aufbruchs, der Suche
-          und prägender Begegnungen.
+        <p>
+          Die folgenden Geschichten erzählen von diesem Übergang:
+          vom Losentscheid, vom ersten großen Prüfungsdruck
+          und von einem Sommer, in dem ich zum ersten Mal das Gefühl hatte,
+          wirklich frei zu sein.
         </p>
 
       </div>
+    </section>
+
+    <section class="kapitel-intro">
+      <div class="content">
+        <h2>Geschichten aus Gießen</h2>
+        <p>
+          Drei Schlüsselgeschichten aus den ersten Studienjahren.
+        </p>
+      </div>
+    </section>
+
+    <section class="geschichtenliste">
+
+      <a href="studium-giessen-hauptgewinn.html" class="geschichte">
+        <h2>Der Hauptgewinn</h2>
+        <p>
+          Wie aus einem mittelmäßigen Abiturzeugnis durch einen Losentscheid
+          plötzlich ein Studienplatz für Humanmedizin wurde.
+        </p>
+      </a>
+
+      <a href="studium-giessen-physikum.html" class="geschichte">
+        <h2>Das Physikum</h2>
+        <p>
+          Der Sitzenbleiber zwischen Einserkandidaten,
+          Lernwahnsinn, Kaffee und der ersten großen Bewährungsprobe.
+        </p>
+      </a>
+
+      <a href="studium-giessen-endlich-frei.html" class="geschichte">
+        <h2>Endlich frei</h2>
+        <p>
+          Honda, Badesee, Luigi und der Sommer,
+          in dem mir die Urteile der anderen plötzlich egal wurden.
+        </p>
+      </a>
 
     </section>
 
-    <section class="story-section">
-
-      <div class="story-section-header">
-        <h2>Geschichten aus dieser Zeit</h2>
-      </div>
-
-      <div class="story-list">
-
-        <!-- Beispiel-Kachel -->
-
-        <a href="#" class="story-card">
-
-          <span>
-            Erste Tage in Gießen
-          </span>
-
-        </a>
-
-        <a href="#" class="story-card">
-
-          <span>
-            Studentenleben in den 1970er Jahren
-          </span>
-
-        </a>
-
-      </div>
-
-    </section>
-
-    <a class="button" href="../../arbeit-leben.html">
-      ← Zurück zu Arbeit & Leben
-    </a>
+    <div class="content">
+      <p>
+        <a href="../../arbeit-leben.html">← Zurück zu Lebensweg</a>
+      </p>
+    </div>
 
   </main>
 
-  <footer class="site-footer">
-    <p>© Naklar2026</p>
+  <footer class="footer">
+    <p>© Lothar Schweigerer · Lebensreise</p>
   </footer>
 
-</div>
-
-<script src="../../script.js"></script>
-
 </body>
+
 </html>
+```
