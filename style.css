@@ -717,3 +717,36 @@ main {
 .blogmotto {
   margin-bottom: 4rem;
 }
+
+.personenblock {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  padding-top: 2.6rem;
+  margin-top: 3.2rem;
+}
+
+.personen-kopf {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.personen-kopf img {
+  width: 54px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+  flex-shrink: 0;
+}
+
+.personen-kopf h2 {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .personen-kopf img {
+    width: 48px;
+    height: 60px;
+  }
+}
