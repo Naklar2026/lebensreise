@@ -750,3 +750,885 @@ main {
     height: 60px;
   }
 }
+
+/* ========================================================================== 
+   KOMPATIBILITÄTSSCHICHT 2026-07-15
+
+   Ziel
+   ----
+   Diese Schicht vereinheitlicht die vorhandenen Layoutgenerationen, ohne eine
+   HTML-Datei anzufassen. Die Referenz ist 03-leben-sfo-ankunft.html.
+
+   Dokumentation der Änderungen
+   -----------------------------
+   01. Wiederverwendbare Designwerte für Farben, Breiten, Schatten und Abstände.
+   02. Einheitliche Grundtypografie, Überschriften, Links und Medien.
+   03. Gemeinsame Navigation für .topnav und die neuere .page-Navigation.
+   04. Konsolidierte Hero-Regeln für .story-header, .seitenkopf und .page .hero.
+   05. Zentrale Regeln für .bildhinweis, figure, figcaption und Bildvarianten.
+   06. Einheitliche Story-Typografie für .geschichte-text, .story und .story-post.
+   07. Unterstützung aller Index-, Kachel- und Weiterlese-Varianten.
+   08. Unterstützung der bisher ungestylten page/site-*-Layoutgeneration.
+   09. Unterstützung für Musik-, Lehrer-, Personen- und Gymnasium-Sonderseiten.
+   10. Gemeinsame Rück-, Kapitel- und Button-Navigation.
+   11. Einheitlicher Footer für .footer und .site-footer.
+   12. Mobile Anpassungen für Navigation, Hero, Text, Raster und Sonderseiten.
+
+   Bestehende Regeln oberhalb dieses Blocks bleiben als Rückwärtskompatibilität
+   erhalten. Bewusste Überschreibungen stehen gesammelt hier und vermeiden
+   weitere !important-Regeln. Die vorhandene ältere !important-Regel für
+   .story-header wird nur dort mit gleicher Spezifitätsart korrigiert, wo dies
+   technisch notwendig ist.
+   ========================================================================== */
+
+/* 01 — Gemeinsame Designwerte */
+:root {
+  --lr-bg: #f7f2ea;
+  --lr-surface: rgba(255, 250, 243, 0.82);
+  --lr-surface-solid: #fffaf3;
+  --lr-text: #25211d;
+  --lr-heading: #2b2621;
+  --lr-muted: #655d54;
+  --lr-accent: #8a5d3b;
+  --lr-line: rgba(70, 55, 35, 0.14);
+  --lr-serif: "Crimson Text", Georgia, serif;
+  --lr-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --lr-content: 820px;
+  --lr-reading: 760px;
+  --lr-wide: 1080px;
+  --lr-page: 1180px;
+  --lr-radius: 18px;
+  --lr-shadow: 0 18px 45px rgba(45, 35, 20, 0.12);
+  --lr-section-x: 8vw;
+  --lr-nav-height: 64px;
+}
+
+/* 02 — Grundtypografie und robuste Medien */
+body {
+  font-family: var(--lr-sans);
+  color: var(--lr-text);
+  background: var(--lr-bg);
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--lr-serif);
+  color: var(--lr-heading);
+  text-wrap: balance;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+audio {
+  max-width: 100%;
+}
+
+.content {
+  width: min(100%, var(--lr-content));
+}
+
+/* 03 — Eine sichtbare, konsistente Hauptnavigation */
+.topnav,
+.page > header .header-inner {
+  min-height: var(--lr-nav-height);
+  padding: 1rem 5vw;
+  background: rgba(24, 21, 18, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topnav {
+  align-items: center;
+}
+
+.topnav a,
+.page > header nav a {
+  color: rgba(255, 250, 245, 0.94);
+  font-family: var(--lr-sans);
+  font-size: 0.94rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  text-decoration: none;
+}
+
+.topnav a:hover,
+.topnav a:focus-visible,
+.page > header nav a:hover,
+.page > header nav a:focus-visible {
+  color: #fff;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.topnav a:focus-visible,
+.page > header nav a:focus-visible,
+.button:focus-visible,
+.geschichte:focus-visible,
+.story-card:focus-visible,
+.story-link:focus-visible,
+.story-category:focus-visible {
+  outline: 3px solid rgba(255, 245, 220, 0.95);
+  outline-offset: 4px;
+}
+
+/* Neuere Seiten besitzen statt .topnav einen eigenen Header. */
+.page > header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.page > header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.page > header .site-title {
+  flex: 0 1 auto;
+}
+
+.page > header .site-title h2,
+.page > header .site-name {
+  margin: 0;
+  color: #fffaf3;
+  font-family: var(--lr-sans);
+}
+
+.page > header .site-title h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.page > header .site-name {
+  margin-top: 0.12rem;
+  font-size: 0.82rem;
+  opacity: 0.78;
+}
+
+.page > header nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+/* 04 — Gemeinsames Hero-System */
+.story-header,
+.seitenkopf,
+.page main > .hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 58vh;
+  padding: 6rem var(--lr-section-x) 4rem;
+  display: flex;
+  align-items: flex-end;
+  background-color: #342d27;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Storybilder bleiben – wie in der Referenz – vollständig sichtbar. */
+.story-header {
+  background-size: contain !important;
+  background-color: #2a241f;
+}
+
+/* Raum-, Index- und Berlin-Header füllen die Fläche. */
+.seitenkopf {
+  background-size: cover;
+}
+
+/* Alle Hero-Texte erhalten dieselbe Lesbarkeit und Typografie. */
+.story-header .hero-overlay,
+.seitenkopf .hero-overlay,
+.page main > .hero > div {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 850px);
+  color: #fffaf2;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.5);
+}
+
+.story-header h1,
+.seitenkopf h1,
+.page main > .hero h1 {
+  margin: 0 0 0.8rem;
+  color: #fffaf2;
+  font-family: var(--lr-serif);
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.story-header .hero-subtitle,
+.seitenkopf .hero-subtitle,
+.page main > .hero .hero-lead {
+  max-width: 760px;
+  margin: 0;
+  color: #fffaf2;
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* Seiten der neueren Generation haben kein Bildattribut: warmer, ruhiger Hero. */
+.page main > .hero {
+  min-height: 46vh;
+  background:
+    linear-gradient(135deg, rgba(35, 29, 24, 0.82), rgba(95, 68, 48, 0.68)),
+    radial-gradient(circle at 80% 15%, #b28a66 0, #6e503b 38%, #302823 100%);
+  background-size: cover;
+}
+
+.page main > .hero .eyebrow,
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: rgba(255, 250, 242, 0.78);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+/* Kompakte und bildbasierte Sonderheader bleiben als dokumentierte Varianten. */
+.seitenkopf.jugend-header {
+  min-height: 28vh;
+}
+
+.gymnasium-header {
+  min-height: 340px;
+  overflow: hidden;
+  background: #342d27;
+}
+
+.gymnasium-header img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+/* 05 — Bildhinweise, Figures und Bildunterschriften */
+.bildhinweis {
+  padding: 1rem var(--lr-section-x) 0;
+  color: var(--lr-muted);
+  text-align: center;
+}
+
+.bildhinweis p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+figure,
+.story-image {
+  width: min(100%, 980px);
+  margin: 3rem auto;
+}
+
+.geschichte-text figure {
+  max-width: 760px;
+}
+
+figure img,
+.story-image img,
+.post-image img {
+  display: block;
+  width: 100%;
+  border-radius: var(--lr-radius);
+  box-shadow: var(--lr-shadow);
+}
+
+figcaption,
+.post-image figcaption {
+  margin-top: 0.8rem;
+  color: var(--lr-muted);
+  font-family: var(--lr-sans);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.story-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: min(100%, 980px);
+  margin: 3rem auto;
+}
+
+.story-image-grid .story-image {
+  margin: 0;
+}
+
+/* 06 — Storytext für alle drei vorhandenen Benennungen */
+.geschichte-text,
+main > .story,
+.story-post,
+.article {
+  padding: 5.5rem var(--lr-section-x) 4rem;
+}
+
+.geschichte-text > .content,
+main > .story,
+.story-post,
+.article {
+  width: min(100%, var(--lr-reading));
+  max-width: var(--lr-reading);
+  margin-inline: auto;
+}
+
+.geschichte-text p,
+main > .story p,
+.story-post .post-text,
+.story-post .post-text p,
+.article p {
+  font-family: var(--lr-serif);
+  font-size: clamp(1.3rem, 2vw, 1.68rem);
+  line-height: 1.72;
+  text-align: left;
+}
+
+.geschichte-text p,
+main > .story p,
+.story-post .post-text p,
+.article p {
+  margin: 0 0 1.75rem;
+}
+
+.story-intro,
+.post-date,
+.kicker {
+  margin: 0 0 2.5rem;
+  color: #51473e;
+  font-family: var(--lr-serif);
+  font-size: clamp(1.45rem, 2.5vw, 1.95rem);
+  line-height: 1.45;
+}
+
+.story-post > h1,
+.article > h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1.05;
+}
+
+/* Verhindert doppeltes Außenpadding, wenn .story eine innere .content-Hülle hat. */
+main > .story > .content {
+  width: 100%;
+  max-width: none;
+}
+
+/* 07 — Index-, Kachel- und Weiterlesevarianten */
+.raumintro,
+.kapitel-intro {
+  padding-inline: var(--lr-section-x);
+}
+
+.raumintro > .content,
+.kapitel-intro > .content {
+  width: min(100%, var(--lr-wide));
+  max-width: var(--lr-wide);
+}
+
+.kapitel-intro h2,
+.raumintro h2,
+.story-section-header h2 {
+  font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+  line-height: 1.08;
+}
+
+.geschichtenliste,
+.story-list,
+.story-grid,
+.teacher-grid {
+  width: min(calc(100% - 2 * var(--lr-section-x)), var(--lr-wide));
+  max-width: var(--lr-wide);
+  margin-inline: auto;
+}
+
+.geschichtenliste {
+  padding-inline: 0;
+}
+
+.geschichte,
+.story-card,
+.story-link,
+.story-category,
+.teacher-card {
+  position: relative;
+  display: block;
+  padding: 1.8rem;
+  overflow: hidden;
+  color: var(--lr-heading);
+  background: var(--lr-surface);
+  border: 1px solid var(--lr-line);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(45, 35, 20, 0.07);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.geschichte:hover,
+.story-card:hover,
+.story-link:hover,
+.story-category:hover,
+.teacher-card:hover {
+  z-index: 1;
+  background: var(--lr-surface-solid);
+  box-shadow: var(--lr-shadow);
+  transform: translateY(-3px);
+}
+
+.geschichte h2,
+.story-card span,
+.story-link span,
+.story-category h2,
+.teacher-card h2,
+.teacher-card h3 {
+  margin: 0;
+  font-family: var(--lr-serif);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+.geschichte p,
+.story-category p,
+.teacher-card p {
+  color: var(--lr-muted);
+}
+
+.weiterlesen,
+.story-section {
+  padding: 2rem var(--lr-section-x) 7rem;
+}
+
+.weiterlesen > .content,
+.story-section > * {
+  width: min(100%, var(--lr-content));
+  max-width: var(--lr-content);
+  margin-inline: auto;
+}
+
+.weiter-grid,
+.story-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.story-list {
+  width: min(100%, var(--lr-content));
+}
+
+.weiter-grid a {
+  border: 1px solid var(--lr-line);
+  box-shadow: 0 8px 22px rgba(45, 35, 20, 0.06);
+}
+
+/* 08 — Vollständige Unterstützung der page/site-*-Generation */
+.page {
+  min-height: 100vh;
+  background: var(--lr-bg);
+}
+
+.page main {
+  width: 100%;
+}
+
+.story-section {
+  width: 100%;
+}
+
+.story-section-header {
+  margin-bottom: 2rem;
+}
+
+.story-section-header h2 {
+  margin: 0;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding: 5rem 0 7rem;
+}
+
+.story-category-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.story-category-arrow {
+  color: var(--lr-accent);
+  font-size: 1.5rem;
+}
+
+.story-post {
+  background: transparent;
+}
+
+.post-image {
+  margin: 2.5rem 0;
+}
+
+/* 09 — Musik-, Lehrer-, Personen- und weitere Sondermodule */
+.songs-grid {
+  width: min(calc(100% - 2 * var(--lr-section-x)), var(--lr-wide));
+  max-width: var(--lr-wide);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.song-card {
+  border: 1px solid var(--lr-line);
+}
+
+.song-card h3 {
+  font-family: var(--lr-serif);
+  font-size: 1.35rem;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding: 0 0 7rem;
+}
+
+.personenblock,
+.haltungen,
+.orientierung,
+.kollegium-intro,
+.klassenfoto-tabelle {
+  width: min(100%, var(--lr-wide));
+  margin-inline: auto;
+}
+
+.textbild {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.65fr);
+  align-items: start;
+  gap: 2rem;
+}
+
+.lebensmotto,
+.blogmotto {
+  max-width: var(--lr-content);
+}
+
+/* Ergänzung 09a — seltene, aber vorhandene Sonderklassen vollständig abdecken. */
+.geschichten {
+  padding: 1rem var(--lr-section-x) 7rem;
+}
+
+.geschichten > .content {
+  width: min(100%, var(--lr-wide));
+  max-width: var(--lr-wide);
+}
+
+.geschichten .geschichtenliste {
+  width: 100%;
+  max-width: none;
+  padding-bottom: 0;
+}
+
+.section-intro {
+  max-width: var(--lr-content);
+  margin: 0 0 2rem;
+  color: var(--lr-muted);
+  font-size: 1.08rem;
+}
+
+.person {
+  margin: 0 0 3rem;
+  padding: 0 0 2rem;
+  border-bottom: 1px solid var(--lr-line);
+}
+
+.person h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+}
+
+.kollegium-header {
+  background-color: #342d27;
+}
+
+.kollegium-foto {
+  max-width: var(--lr-wide);
+}
+
+.foto-marker-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.foto-marker-wrap > img {
+  display: block;
+  width: 100%;
+}
+
+.foto-marker {
+  position: absolute;
+  z-index: 2;
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
+  padding: 0.2rem 0.35rem;
+  color: #fff;
+  background: rgba(35, 29, 24, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+
+.klassenfoto-tabelle {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  border-collapse: collapse;
+  background: var(--lr-surface);
+}
+
+.klassenfoto-tabelle th,
+.klassenfoto-tabelle td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--lr-line);
+  text-align: left;
+}
+
+.klassenfoto-tabelle .nummer {
+  width: 6rem;
+  color: var(--lr-accent);
+  font-weight: 700;
+}
+
+/* 10 — Eine gemeinsame Rück-, Kapitel- und Buttondarstellung */
+.story-back,
+.back-link,
+.kapitelnavigation,
+.chapter-nav {
+  width: min(100%, var(--lr-content));
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lr-line);
+}
+
+.story-back a,
+.back-link,
+.back-link a,
+.kapitelnavigation a,
+.chapter-nav a {
+  color: var(--lr-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.story-back a:hover,
+.back-link:hover,
+.back-link a:hover,
+.kapitelnavigation a:hover,
+.chapter-nav a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  padding: 0.85rem 1.2rem;
+  color: #fffaf3;
+  background: var(--lr-accent);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page main > .button {
+  margin: 0 var(--lr-section-x) 5rem;
+}
+
+.button:hover {
+  background: #70472d;
+}
+
+/* 11 — Gemeinsamer Footer */
+.footer,
+.site-footer {
+  padding: 2rem var(--lr-section-x);
+  color: #7a7066;
+  background: transparent;
+  border-top: 1px solid var(--lr-line);
+  font-family: var(--lr-sans);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer p,
+.site-footer p {
+  margin: 0;
+}
+
+/* 12 — Mobile Regeln für alle Layoutfamilien */
+@media (max-width: 900px) {
+  :root {
+    --lr-section-x: 6vw;
+  }
+
+  .page > header .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .page > header nav {
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .story-grid,
+  .teacher-grid,
+  .geschichtenliste.lehrergrid {
+    grid-template-columns: 1fr;
+  }
+
+  .textbild {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --lr-section-x: 5.5vw;
+    --lr-nav-height: 56px;
+  }
+
+  .topnav {
+    min-height: var(--lr-nav-height);
+    padding: 0.9rem var(--lr-section-x);
+  }
+
+  .story-header,
+  .seitenkopf,
+  .page main > .hero {
+    min-height: 48vh;
+    padding: 5.5rem var(--lr-section-x) 2.5rem;
+  }
+
+  .story-header {
+    min-height: 44vh;
+  }
+
+  .seitenkopf.jugend-header {
+    min-height: 26vh;
+  }
+
+  .geschichte-text,
+  main > .story,
+  .story-post,
+  .article {
+    padding: 3.5rem var(--lr-section-x) 2.5rem;
+  }
+
+  .raumintro,
+  .kapitel-intro {
+    padding-top: 3.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .weiterlesen,
+  .story-section {
+    padding: 1rem var(--lr-section-x) 4rem;
+  }
+
+  .story-image-grid,
+  .story-grid,
+  .songs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  figure,
+  .story-image,
+  .story-image-grid {
+    margin-block: 2rem;
+  }
+
+  .gymnasium-header,
+  .gymnasium-header img {
+    min-height: 280px;
+    height: 280px;
+  }
+
+  .gymnasium-header .hero-overlay {
+    left: var(--lr-section-x);
+    right: var(--lr-section-x);
+    top: 72px;
+  }
+
+  .geschichte,
+  .story-card,
+  .story-link,
+  .story-category,
+  .teacher-card {
+    padding: 1.35rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .story-header,
+  .seitenkopf,
+  .page main > .hero {
+    min-height: 42vh;
+  }
+
+  .story-header h1,
+  .seitenkopf h1,
+  .page main > .hero h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+  }
+
+  .geschichte-text p,
+  main > .story p,
+  .story-post .post-text,
+  .story-post .post-text p,
+  .article p {
+    font-size: 1.25rem;
+    line-height: 1.68;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
