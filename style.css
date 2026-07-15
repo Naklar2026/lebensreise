@@ -39,6 +39,11 @@ body {
   font-weight: 600;
 }
 
+body:has(.lebensraeume) > .hero h1 {
+  color: #f8f6f2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.38);
+}
+
 .hero-subtitle {
   font-size: clamp(1.15rem, 2.5vw, 1.7rem);
   max-width: 760px;
@@ -426,7 +431,7 @@ main {
 .schuhe-header {
   background:
     linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.58)),
-    url("../images/schuhe-header.jpeg");
+    url("images/kindheit-schuhe-header.jpg");
 }
 
 .story-image {
