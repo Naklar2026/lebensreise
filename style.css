@@ -1648,3 +1648,48 @@ main > .story > .content {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Startseite: kompaktere Typografie unterhalb des unveränderten Heros */
+body:has(.lebensraeume) .schlussgedanke {
+  padding: 2.5rem 8vw 3rem;
+}
+
+body:has(.lebensraeume) .schlussgedanke p {
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+  line-height: 1.5;
+  max-width: 760px;
+}
+
+body:has(.lebensraeume) .prolog {
+  padding: 3.5rem 8vw 2rem;
+}
+
+body:has(.lebensraeume) .prolog .content {
+  max-width: 760px;
+}
+
+body:has(.lebensraeume) .prolog p {
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  line-height: 1.65;
+  margin-bottom: 1.35rem;
+}
+
+body:has(.lebensraeume) .prolog .abschlusssatz {
+  font-size: clamp(1.5rem, 2vw, 1.9rem) !important;
+  line-height: 1.4 !important;
+  margin-top: 2rem !important;
+}
+
+body:has(.lebensraeume) .kapitel-intro {
+  padding-top: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  body:has(.lebensraeume) .schlussgedanke {
+    padding: 2rem 5.5vw 2.5rem;
+  }
+
+  body:has(.lebensraeume) .prolog {
+    padding: 2.5rem 5.5vw 2rem;
+  }
+}
