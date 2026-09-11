@@ -605,7 +605,7 @@ main {
 .musik-header {
   background-image:
     linear-gradient(rgba(20,18,15,0.35), rgba(20,18,15,0.60)),
-    url("images/musik-header.jpg");
+    url("images/musik/header/musik-header.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
