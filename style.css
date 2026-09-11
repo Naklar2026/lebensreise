@@ -1029,6 +1029,15 @@ audio {
   object-fit: cover;
 }
 
+.gymnasium-header .hero-overlay {
+  position: absolute;
+  left: var(--lr-section-x);
+  right: var(--lr-section-x);
+  top: auto;
+  bottom: 4rem;
+  transform: none;
+}
+
 /* 05 — Bildhinweise, Figures und Bildunterschriften */
 .bildhinweis {
   padding: 1rem var(--lr-section-x) 0;
@@ -1589,7 +1598,9 @@ main > .story > .content {
   .gymnasium-header .hero-overlay {
     left: var(--lr-section-x);
     right: var(--lr-section-x);
-    top: 72px;
+    top: auto;
+    bottom: 2.5rem;
+    transform: none;
   }
 
   .geschichte,
