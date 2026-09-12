@@ -18,7 +18,7 @@ body {
   min-height: 82vh;
   background:
     linear-gradient(rgba(20, 18, 15, 0.22), rgba(20, 18, 15, 0.48)),
-    url("images/portrait-lothar.jpeg");
+    url("images/start/header/start-header.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -483,7 +483,7 @@ main {
 .jugend-header {
   background-image:
     linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.55)),
-    url("images/jugend.jpg");
+    url("images/jugend/header/jugend-header.jpg");
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
