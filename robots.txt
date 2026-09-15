@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.lothar-schweigerer.de/sitemap.xml
